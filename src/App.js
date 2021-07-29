@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import  A from './MyButton';
+import UserDetails from './UserDetails';
+import TotalDisplay from './TotalDisplay';
+
+class App extends Component {
+  componentDidMount(){
+    console.log('inside mount of App')
+  }
+  render(){
+    return (
+      <div className="App">
+        <A text="hello" />
+        <A text="hi" />
+        <UserDetails />
+        <TotalDisplay />
+      </div>
+    );
+  }
+  
 }
 
 export default App;
